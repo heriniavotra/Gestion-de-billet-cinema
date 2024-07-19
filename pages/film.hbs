@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" style="text/css" href="/css/film.css">
+    <title>Ajout du film</title>
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/listefilm">Liste des films</a></li>
+                <li><a href="/ajouter-seance">Ajouter un seance</a></li>
+                <li><a href="/admin">Administration</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="container">
+        <form action="/film" method="POST" class="form">
+            <H1>Ajouter un film</H1>
+            <input type="hidden" name="idfilm" id="idfilm">
+            <label for="">Titre:</label>
+            <input type="text" name="titre" id="titre" placeholder="Titre du film"><br>
+            <label for="">Genre:</label>
+            <input type="text" name="genre" id="genre" placeholder="Genre du film"><br>
+            <button type="submit" id="envoyer">Envoyer</button>
+
+        </form>
+    </div>
+
+</body>
+
+</html>

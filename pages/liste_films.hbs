@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/liste_film.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>liste des films </title>
+</head>
+<body>
+    <head>
+        <div class="nav">
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/film">Ajouter un film</a></li>
+                <li><a href="/admin">Administration</a></li>
+            </ul>
+        </div>
+    </head>
+   
+    <table>
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Titre</td>
+                <td>Genre</td>
+                <td>Actions</td>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each film}}
+            <tr>
+                <td>{{this.id_film}}</td>
+                <td>{{this.titre}}</td>
+                <td>{{this.genre}}</td>
+                <td><a href="/listefilm/{{this.id_film}}">supprimer</a></td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/seance.css">
+    <title>Ajouter un seance</title>
+    <script src="/js/seance.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/admin">Administration</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="container">
+        <form action="/ajouter-seance" method="post" class="form">
+            <H1>Ajouter une seance</H1>
+            <input type="hidden" name="idseance" id="idseance">
+            <label for="">Date:</label>
+            <input type="date" name="dateSeance" id="dateSeance"><br>
+            <label for="">Horaire:</label>
+            <input type="time" name="horaire" id="horaire"><br>
+            <label for="">Film:</label>
+            <select name="film" id="film" value="">
+                {{#each film}}
+                <option value="{{this.id_film}}">{{this.titre}} - {{this.genre}}</option>
+                {{/each}}
+            </select><br>
+            <button type="submit" id="ajout">Ajouter</button>
+        </form>
+    </div>
+   
+</body>
+
+</html>

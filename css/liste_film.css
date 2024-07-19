@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(films.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100px;
+}
+
+header {
+    background-color: #c5210b00;
+    color: #ffffff;
+    padding: 10px;
+    height: 49px;
+}
+
+ul {
+    float: right;
+    list-style-type: none;
+}
+
+li {
+    float: left;
+    left: 200px;
+}
+
+li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 30px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: rgb(236, 213, 7);
+    color: white;
+    border-radius: 20px;
+    border: none;
+}
+table {
+
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    border: none;
+}
+
+
+thead {
+
+    background-color: rgb(128, 47, 0);
+    color: white
+}
+
+
+th,
+td {
+    padding: 8px 0;
+    color: white;
+
+}
+
+tbody tr:nth-child(even) {
+
+    background-color: #ffd000
+}
+H1 {
+    color: rgb(218, 232, 238);
+}
+
+.titre {
+    margin-left: 10px;
+    display: block;
+    text-align: center;
+
+}
+a {
+    color: #ffffff;
+}

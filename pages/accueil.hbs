@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+    <script src="/js/reservation.js" defer></script>
+    <link rel="stylesheet" style="text/css" href="/css/reservation.css">
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/client/{{clientId}}/historique">Historique</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="filminfo">
+        <table id="element">
+            <tbody>
+                {{#each seance}}
+                <tr>
+                    <td>{{this.id_seance}}</td>
+                    <td>{{this.titre}} {{this.horaire}}</td>
+                </tr>
+
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <div class="container">
+
+        <H1 class="titre1">Effectuez votre réservation ici</H1>
+        <form action="/client/{{clientId}}/reservation" method="post" class="form">
+            <input type="hidden" name="clientId" value="{{clientId}}">
+            <input type="number" name="nbrBillet" id="nbrBillet" placeholder="Nombre de billet à réserver">
+            <input type="text" name="idSeance" id="idSeance" placeholder="Infos du seance"><br>
+            <input type="date" name="dateRes" id="dateRes"><br>
+            <input type="text" id="value" name="value" placeholder="choissisez votre place ci-desous">
+
+            <button type="submit" id="valider">valider</button>
+
+        </form>
+        <h4 class="titre2">Veuillez choisir votre place ci-dessous</h4>
+        <button onclick="lateraleGauche()" id="gauche" class="place">Latérale gauche</button>
+        <button onclick="Milieu()" id="milieu" class="place">Milieu</button>
+        <button onclick="lateraleDroite()" id="droite" class="place">Latérale droite</button><br>
+
+
+    </div><br>
+</body>
+
+</html>

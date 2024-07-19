@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>liste des seances </title>
+    <link rel="stylesheet" href="/css/seance.css">
+    <script src="/js/seance.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/film">Ajouter un film</a></li>
+                <li><a href="/listefilm">Liste des films</a></li>
+                <li><a href="/ajouter-seance">Ajouter un seance</a></li>
+                <li><a href="/listereservation">Liste des résevations</a></li>
+            </ul>
+        </div>
+    </header>
+    <table id="donnee">
+        <H1 class="titre">Liste des seances disponibles</H1>
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>date du seance</td>
+                <td>Horaire</td>
+                <td>film</td>
+                <td>Actions</td>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each seance}}
+            <tr>
+                <td>{{this.id_seance}}</td>
+                <td>{{this.date_seance}}</td>
+                <td>{{this.horaire}}</td>
+                <td>{{this.titre}} </td>
+                <td>
+                    <a href="/admin/{{this.id_seance}}">supprimer</a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    <div class="container">
+        <form action="/admin" method="post" class="form">
+            <H1>Modifier une seance</H1>
+            <input type="hidden" name="idseance" id="idseance">
+            <label for="">Date:</label>
+            <input type="date" name="dateSeance" id="dateSeance"><br>
+            <label for="">Horaire:</label>
+            <input type="time" name="horaire" id="horaire"><br>
+            <label for="">Film:</label>
+            <select name="film" id="film" value="">
+                {{#each seance}}
+                <option value="{{this.id_film}}">{{this.titre}}</option>
+                {{/each}}
+            </select><br>
+            <button type="submit" id="modifier"> <a href=""></a> Modifier</button>
+        </form>
+    </div>
+   
+   
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/liste_film.css">
+    <title>Réservation</title>
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/admin">Administration</a></li>
+            </ul>
+        </div>
+    </header>
+    <table>
+        <thead>
+            <tr>
+               
+                <td>nom</td>
+                <td>prénom</td>
+                <td>Place</td>
+                <td>titre</td>
+                <td>Genre</td>
+                <td>Horaire</td>
+                <td>Nombre de billet</td>
+                <td>date de réservation</td>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each reserver}}
+            <tr>
+                <td>{{nom}}</td>
+                <td>{{prenom}}</td>
+                <td>{{place}}</td>
+                <td>{{titre}}</td>
+                <td> {{genre}}</td>
+                <td>{{horaire}}</td>
+                <td>{{nbr_billet}}</td>
+                <td>{{date_res}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>liste des films </title>
+    <link rel="stylesheet" href="/css/liste_film.css">
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/admin">Administration</a></li>
+            </ul>
+        </div>
+    </header>
+    <table>
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>nom</td>
+                <td>prénom</td>
+                <td>Actions</td>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each client}}
+            <tr>
+                <td>{{this.id_client}}</td>
+                <td>{{this.nom}}</td>
+                <td>{{this.prenom}}</td>
+                <td><a href="/listeclient/{{this.id_client}}">supprimer</a></td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</body>
+
+</html>

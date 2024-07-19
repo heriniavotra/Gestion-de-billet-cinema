@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/histo.css">
+    <title>liste des films </title>
+</head>
+
+<body>
+    <ul>
+        <h1>Historique de votre reservation</h1>
+        {{#each reserver}}
+            <li>Votre nom: {{nom}}</li>
+            <li>Votre prénom: {{prenom}}</li>
+           <li>Place : {{place}}</li> 
+           <li>Nombre de billets réservés : {{nbr_billet}}</li> 
+           <li>Date de réservation : {{date_res}}</li>
+           <li>titre du film : {{titre}}</li> 
+           <li>genre du film: {{genre}}</li> 
+           <li>Horaire du seance: {{horaire}}</li> 
+          
+        {{/each}}
+    </ul>
+  
+</body>
+
+</html>
